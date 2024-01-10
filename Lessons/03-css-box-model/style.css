@@ -1,0 +1,31 @@
+body {
+    background-color: pink;
+    font-size: 32px;
+    margin: 0;
+}
+
+.outer1 {
+    background-color: blue;
+    height: 200px;
+    margin-bottom: 20px; /* Большее поглощает меньшее margin-top: 10px; */
+    /* padding-top: 1px; */
+    border-top: 1px solid transparent;
+}
+
+.outer2 {
+    background-color: green;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.inner1 {
+    background-color: red;
+    height: 100px;
+    width: 80%;
+    /* padding-left: 15px;
+    padding-top: 20px; */
+    /* padding: 10px 15px 20px; */
+    /* margin-left: 20px; */
+    /* margin-top: 14px; */
+    margin: 14px auto 0;
+}
