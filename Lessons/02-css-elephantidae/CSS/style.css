@@ -1,0 +1,60 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    color: blue;
+    font-size: 48px;
+    color: green;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 24px;
+    font-family: 'Mansalva', sans-serif;
+}
+
+#asian {
+    border-color: darkred;
+}
+
+#african {
+    border-color: crimson;
+}
+
+img {
+    width: 480px;
+    height: 360px;
+    border: 3px solid black;
+    border-color: green;
+    border-radius: 50%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    /* border-style: solid;
+    border-color: black; */
+}
+
+/* th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+} */
+
+/* a {
+    text-decoration: none;
+} */
+
+#probo {
+    color: blueviolet;
+}

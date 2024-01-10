@@ -1,0 +1,55 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-76827.jpg?w=2000&t=st=1704814609~exp=1704815209~hmac=d74d37080c2f6c5f0cca25cb3f3285fe9e18e06e5be2259024a3ca2ae20759a3");
+    background-repeat: repeat-y;
+    background-position: left top;
+    background-attachment: scroll;
+    font-size: 26px;
+}
+
+div {
+    border: 3px inset gray;
+    padding: 41px;
+    margin: 7px;
+}
+
+h1 {
+    color: navy;
+    font-size: 36px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+    color: rgb(30, 61, 147);
+    font-size: 34px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    color: darkblue;
+    font-size: 28;
+    font-family: 'Diphylleia', serif, cursive;
+}
+
+table {
+    border: 1px solid slategray;
+}
+
+#address {
+    font-size: 24px;
+}
+
+#Flights,
+th,
+td {
+    width: 1300px;
+    font-size: 24px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#Time {
+    text-align: center;
+}
