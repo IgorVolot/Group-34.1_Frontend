@@ -16,6 +16,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* border-top: 1px solid transparent; */
+    /* padding-top: 1px; */
+    /* padding-top: 133px;
+    box-sizing: border-box; */
 }
 
 h1 {
@@ -23,5 +27,43 @@ h1 {
     font-family: 'Covered By Your Grace', cursive;
     color: rgba(3, 150, 100, 0.75);
     text-align: center;
-    padding: 100px;
+    padding-top: 133px;
+    /* margin-top: 133px; */
+}
+
+.main > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main li {
+    margin: 100px 0;
+    border-bottom: 1px solid #e4bb97;
+    padding-bottom: 60px;
+}
+
+.main li > h2 {
+    font-weight: 800;
+    font-size: 28px;
+    background-color: #aa8eb5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main li > p {
+    color: #444;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 32px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.main li > a {
+    color: #214e34;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
 }
