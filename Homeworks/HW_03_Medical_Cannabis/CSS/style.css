@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nanum+Myeongjo:wght@400;700;800&family=Rubik+Lines&display=swap');
+
+* {
+    margin: 0;
+}
+
+html {
+    background-color: rgb(172, 167, 104);
+    background-size: cover;
+}
+
+.header {
+    margin: 5px 0;
+    height: 200px;
+    background-image: url(../Images/Image-Copy\(1\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: #dbff66;
+    font-family: 'Rubik Lines', system-ui;
+    font-weight: 400;
+    font-size: 3.9em;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px rgb(103, 123, 116);
+    padding-top: 58px;
+}
+
+.main {
+    background-image: url(https://npr.brightspotcdn.com/dims4/default/fd2a0d4/2147483647/strip/true/crop/1500x1002+0+0/resize/1760x1176!/format/webp/quality/90/?url=https%3A%2F%2Fnpr.brightspotcdn.com%2Flegacy%2Fsites%2Fkwmu%2Ffiles%2F201912%2F120419_eds_marijuanafacility___3_.jpg);
+    padding-bottom: 1170px;
+    position: relative;
+}
+
+.footer {
+    background: url(https://cdn10.bigcommerce.com/s-nooeb3z/products/933/images/26721/6525_close__93947.1498770563.700.700.jpg?c=2);
+    color: #000;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5em;
+    padding: 30px;
+}
+
+#body-pic {
+    opacity: 0.5;
+}
+
+#img1,
+#img3,
+#img5 {
+    height: 22%;
+    width: 24%;
+    border-radius: 5px 40px;
+    outline: thick ridge rgb(79, 100, 26);
+}
+
+#img2,
+#img4,
+#img6 {
+    height: 22%;
+    width: 24%;
+    border-radius: 40px 5px;
+    outline: thick ridge rgb(79, 100, 26);
+
+}
+
+#img1 {
+    top: 40px;
+    left: 200px;
+    position: absolute;
+}
+
+#img2 {
+    top: 180px;
+    left: 700px;
+    position: absolute;
+}
+
+#img3 {
+    top: 380px;
+    left: 200px;
+    position: absolute;
+}
+
+#img4 {
+    top: 520px;
+    left: 700px;
+    position: absolute;
+}
+
+#img5 {
+    top: 720px;
+    left: 200px;
+    position: absolute;
+}
+
+#img6 {
+    top: 860px;
+    left: 700px;
+    position: absolute;
+}
+
+.main>ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer_logo {
+    height: 9%;
+    width: 4%;
+    border-radius: 10px;
+    left: 90px;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.header > a {
+    text-decoration: none;
+}
