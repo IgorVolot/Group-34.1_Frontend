@@ -45,6 +45,8 @@ h1 {
 .li1, .li2, .li3, .li4, .li5, .li6 {
     width: 50%;
     position: absolute;
+    height: 230px;
+    /* overflow-y: auto; */
 }
 
 .li2 {
