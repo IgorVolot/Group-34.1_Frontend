@@ -11,7 +11,8 @@ body {
     background-attachment: fixed;
 }
 
-header, footer {
+header,
+footer {
     background-color: rgba(60, 69, 67, 0.6);
 }
 
@@ -57,16 +58,6 @@ h1 {
     float: right;
     width: 50%;
     margin: 5px 5px 0;
-    text-align: center;
-    border: 1px solid #eedb00;
-    border-radius: 0 0 15px 15px;
-}
-
-section div {
-    margin: 1px;
-    display:block;
-    width: 33%;
-    float: left;
 }
 
 img {
@@ -78,6 +69,21 @@ img {
     letter-spacing: 0.2em;
     line-height: 1.4;
     text-align: justify;
+}
+
+.right {
+    border: 1px solid #eedb00;
+    border-radius: 0 0 15px 15px;
+}
+
+.right h2 {
+    text-align: center;
+}
+
+.right img {
+    width: 33%;
+    float: left;
+    margin: 0.15%;
 }
 
 .left img {
@@ -92,8 +98,8 @@ img {
     width: 11em;
     height: 2em;
     position: relative;
-    margin-left: 22em;
-    margin-top: 2em;
+    left: 22em;
+    top: 2em;
 }
 
 .button > p {
