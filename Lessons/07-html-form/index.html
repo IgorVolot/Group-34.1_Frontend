@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form name="register" action="#" method="get">
+    <fieldset>
+        <legend>Personal data</legend>
+        <p>
+            <label for="fName">Enter first name:</label>
+            <input id="fName" type="text" name="firstName" placeholder="John" autofocus>
+        </p>
+        <p>
+            <label for="lName">Enter last name:</label>
+            <input id="lName" type="text" name="lastName" placeholder="Smith"/>
+        </p>
+        <p>
+            <label for="email">Enter email:</label>
+            <input 
+            id="email" 
+            type="email" 
+            name="email" 
+            placeholder="john@gmail.com" 
+            required
+            autocomplete="off"
+            > *
+        </p>
+        <p>
+            <label for="pass">Enter last name:</label>
+            <input id="pass" type="password" name="password"/>
+        </p>
+        <p>
+            Gender:
+            <label for="gender">
+                <input type="radio" name="gender" value="male">
+                Male
+            </label>
+            <label for="gender">
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+            <label for="gender">
+                <input type="radio" name="gender" value="other">
+                Other...
+            </label>
+        </p>
+        <p>
+            Hobby:
+            <label for="hobby">
+                <input type="checkbox" name="vodka">
+                Vodka
+            </label>
+            <label for="hobby">
+                <input type="checkbox" name="cannabis">
+                Cannabis
+            </label>
+            <label for="hobby">
+                <input type="checkbox" name="sex">
+                Sex
+            </label>
+            <p>
+                <label>Birth date:
+                    <input type="date" name="birthDate">
+                </label>
+            </p>
+        </p>
+        <p>
+            <label>Language:
+                <select name="lang">
+                    <option selected>Chose your language</option>
+                    <option value="de">German</option>
+                    <option value="he">Hebrew</option>
+                    <option value="en">English</option>
+                    <option value="uk">Ukraine</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>Comment:
+                <textarea name="comment" id="" cols="30" rows="10"></textarea>
+            </label>
+        </p>
+    </fieldset>
+    <button type="submit">Send</button>
+    <button type="reset">Clear</button>
+    <button type="button" id="backButton">Back</button>
+    <button type="button" id="forwardButton">Forward</button>
+</form>
+</body>
+</html>
