@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.banner {
+    background-image: url(../Images/bck-grnd.jpg);
+    height: 35em;
+    background-size: cover;
+    background-position: center;
+    color: antiquewhite;
+    text-shadow: 0.3em 0.3em 0.3em black;
+}
+
+.banner h2 {
+    font-size: 4.5em;
+}
