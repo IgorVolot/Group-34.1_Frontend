@@ -1,0 +1,10 @@
+@media screen and (min-width: 1024px) {
+    body {
+      background-color: rgba(219, 213, 204, 0.687);
+    }
+
+    .header1 {
+        font-size: 5em;
+    }
+
+  }
