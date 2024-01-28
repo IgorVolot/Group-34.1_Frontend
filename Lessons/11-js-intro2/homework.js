@@ -11,6 +11,7 @@ index = binarySearch(arr, 7);
 console.log(`index = ${index}`);
 
 sort(arr, ascendingComparator);
+// sort(arr, (a,b) => b - a);
 printArray(arr);
 
 sort(arr, descendingComparator);
@@ -26,7 +27,7 @@ function printArray(arr) {
 
 function bubbleSort(arr) {
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length - 1; j++) {
+        for (let j = 0; j < arr.length - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
                 let temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -43,9 +44,9 @@ function binarySearch(arr, value) {
         // let remain = (((l + r) / 2) * 10) % 10 / 10;
         // let mid = ((l + r) / 2) % 10 - remain + 1;  Так не работает, кошда l + r >= 21
 
-        // Почему Вы раньше не сказали, что в JS тоже есть Math.floor()
+        // Почему Вы раньше не сказали, что в JS тоже есть Math.floor(), Math.round()
 
-        let mid = Math.floor((l + r) / 2);
+        let mid = Math.round((l + r) / 2);
 
         if (arr[mid] === value) {
             return mid;
@@ -56,7 +57,7 @@ function binarySearch(arr, value) {
             r = mid - 1;
         }
     }
-    return undefined; // null
+    return -l - 1;
 }
 
 function ascendingComparator(a, b) {
@@ -73,7 +74,7 @@ function descendingComparator(a, b) {
 
 function sort(arr, comparator) {
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length - 1; j++) {
+        for (let j = 0; j < arr.length - 1 - i; j++) {
             if (comparator(arr[j], arr[j + 1]) > 0) {
                 let temp = arr[j];
                 arr[j] = arr[j + 1];
