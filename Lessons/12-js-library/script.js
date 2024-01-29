@@ -23,11 +23,24 @@ let inputData = prompt('Enter book data separate by ";"');
 //     }
 // }
 
+// while (inputData) {
+//     // create and add to library only unique book by isbn
+//     const arr = inputData.split(';');
+//     if(findBook(library, arr[0] ) === -1){
+//         const book = new Book(arr[0], arr[1], arr[2], arr[3]);
+//         library.push(book);
+//     }
+//
+//     inputData = prompt('Enter book data separate by ";"');
+// }
+
+
 while (inputData) {
     const bookData = inputData.split(';');
-    const book = new Book(...bookData);
+    // const book = new Book(...bookData);
 
-    if (findBook(library, book.isbn) === -1) {
+    if (findBook(library, bookData[0]) === -1) {
+        const book = new Book(bookData[0], bookData[1], bookData[2], bookData[3]);
         library.push(book);
     }
     inputData = prompt('Enter book data separate by ";"');
@@ -40,7 +53,7 @@ function printLibrary(library) {
     // console.table(library);
 
     for (let i = 0; i < library.length; i++) {
-        console.log(library[i]);
+        console.log(library[i].toString());
     }
     console.log('====================');
 }
