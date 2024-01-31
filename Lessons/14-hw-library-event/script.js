@@ -3,18 +3,20 @@ const printBooks = document.getElementById('printBooks');
 const library = [];
 result.style.border = '1px solid black';
 
+const isbnInput = document.getElementById('isbn');
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
+const yearInput = document.getElementById('year');
+const resultDiv = document.getElementById('result');
+
+const isbn = isbnInput.value.trim();
+const title = titleInput.value.trim();
+const author = authorInput.value.trim();
+const year = yearInput.value.trim();
+
+
 addBook.onclick = function () {
     // Collect data from inputs, create new book and add new book to library if this book unique
-    const isbnInput = document.getElementById('isbn');
-    const titleInput = document.getElementById('title');
-    const authorInput = document.getElementById('author');
-    const yearInput = document.getElementById('year');
-    const resultDiv = document.getElementById('result');
-
-    const isbn = isbnInput.value.trim();
-    const title = titleInput.value.trim();
-    const author = authorInput.value.trim();
-    const year = yearInput.value.trim();
 
     if (isbn === '' || title === '' || author === '' || year === '') {
         alert('Please fill in all fields.');
@@ -40,6 +42,15 @@ addBook.onclick = function () {
 
     // Notify the user that the book has been added
     // alert('The book has been successfully added to the library.');
+
+    // Edward Fish
+    // if (findBook(library, isbn.value) === -1) {
+    //     const book = new Book(isbn.value, title.value, author.value, year.value);
+    //     library.push(book);
+    // } else {
+    //     alert(`Book with isbn = ${isbn.value} exists`);
+    // }
+    // isbn.value = title.value = author.value = year.value = '';
 }
 
 printBooks.onclick = function () {
