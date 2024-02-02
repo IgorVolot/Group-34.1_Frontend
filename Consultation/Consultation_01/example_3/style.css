@@ -1,0 +1,19 @@
+.element {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    border: 10px solid #000000;
+  }
+
+  .first {
+    box-sizing: content-box;
+    background-color: #2E9AFF;
+    
+  }
+  
+  .second {
+    box-sizing: border-box;
+    background-color: #F498AD;
+  }
+  

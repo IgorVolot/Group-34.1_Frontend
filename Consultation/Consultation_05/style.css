@@ -1,0 +1,19 @@
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #f44336;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./home.html" method="get">
+
+        <label for="nick-name-input"> Ваше пираткское имя</label>
+        <input type="text" name="nick-name" id="nick-name-input" required>
+
+        <label for="gold-input"> Сколько золота при себе</label>
+        <input type="number" name="gold" id="gold-input" required>
+
+        <input type="text" placeholder="имя попугая" name="parrot">
+
+        <label for="teeth-color"> Цвет ваших зубов</label>
+        <input type="text" name="teeth-color"   required>
+
+        <label for="birth-date-input"> Дата рождения</label>
+        <input type="date" name="birth-date" id="birth-date-input"  required>
+
+        <input type="email" name="email" id="email-input" placeholder="email">
+
+        <fieldset>
+            <legend>Оружие</legend>
+            <div>
+        <label for="radio-pistol"> PISTOL</label>
+        <input type="radio" name="weapon" id="radio-pistol">
+            </div>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+            <div>
+                <label for="radio-saber">Saber</label>
+                <input type="radio" name="weapon" id="radio-saber"  checked>
+            </div>
+        </fieldset>
+        <label for="legs-input">Количество ног</label>
+        <select name="number-of-legs" id="legs-input">
+            <option value="1">Одна нога</option>
+            <option value="2" selected>Две ноги</option>
+            <option value="3">Три ноги</option>
+
+        </select>
+
+        <fieldset>
+            <legend>Контрабанда</legend>
+            <input type="checkbox" name="cats" id="cats-input" value="cats">
+            <label for="cats-input">Котики</label>
+
+            <input type="checkbox" name="coin" id="coin-input" value="coin">
+            <label for="coin-input">Bitcoin</label>
+
+            <input type="checkbox" name="Alcohol" id="Alcohol-input" value="Alcohol">
+            <label for="Alcohol-input">Бутылка рома</label>
+        </fieldset>
+    <button type="submit">Подать заявку на вступление</button>
+    <button type="reset">Очистить форму</button>
+</form>
+    
+</body>
+</html>
