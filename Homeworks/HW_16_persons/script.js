@@ -28,17 +28,6 @@ addPerson.onclick = function () {
 
     // input fields clearance
     personId.value = firstName.value = lastName.value = birthDate.value = '';
-}
-
-// function / "Get stats" button/ creating statistical data; formatting and filling "personList" and "stats" fields accordingly
-calcStats.onclick = function () {
-    // creating <h2> element for statistic list "stats"
-    const h2Element = document.createElement('h2');
-    h2Element.textContent = 'Stats';
-
-    // clearance "stats" field and adding <h2>
-    stats.textContent = '';
-    stats.appendChild(h2Element);
 
     // list of persons formation -> "personList"
     const listOfPersons = document.createElement('ol');
@@ -49,12 +38,26 @@ calcStats.onclick = function () {
         listOfPersons.appendChild(li);
     }
 
+    // adding list of person "personList" to output
+    personsList.textContent = '';
+    personsList.appendChild(listOfPersons);
+}
+
+// function / "Get stats" button/ creating statistical data; formation and filling "stats" fields
+calcStats.onclick = function () {
+    // creating <h2> element for statistic list "stats"
+    const h2Element = document.createElement('h2');
+    h2Element.textContent = 'Stats';
+
+    // clearance "stats" field and adding <h2>
+    stats.textContent = '';
+    stats.appendChild(h2Element);
+
     // calculation of oldest, youngest persons and average age -> "stats"
     const oldestPerson = persons.reduce((accum, p) => p.age() < accum.age() ? p : accum);
     const youngestPerson = persons.reduce((accum, p) => p.age() > accum.age() ? p : accum);
     const totalAge = persons.reduce((accum, p) => accum + p.age(), 0);
     const averageAge = Math.round(totalAge / persons.length);
-
 
     // creating statistic elements for output in "stats"
     const oldestPersonP = document.createElement('p');
@@ -64,9 +67,7 @@ calcStats.onclick = function () {
     const averageAgeP = document.createElement('p');
     averageAgeP.textContent = `Average age: ${averageAge}`;
 
-    // adding list of person "personList" and statistic "stats" into appropriate containers
-    personsList.textContent = '';
-    personsList.appendChild(listOfPersons);
+    // adding list of "stats" into appropriate container
     stats.appendChild(oldestPersonP);
     stats.appendChild(youngestPersonP);
     stats.appendChild(averageAgeP);
