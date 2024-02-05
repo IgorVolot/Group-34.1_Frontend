@@ -20,38 +20,66 @@ addPerson.onclick = function () {
 
     // add persons with check for unique
     if (findId(persons, personId.value) === -1) {
+        clearStats();
         const person = new Person(personId.value, firstName.value, lastName.value, birthDateValue);
         persons.push(person);
+        displayPersons();
     } else {
         alert(`Person with this id = ${personId.value} exists`);
     }
 
     // input fields clearance
     personId.value = firstName.value = lastName.value = birthDate.value = '';
+}
 
-    // list of persons formation -> "personList"
+// function to clear "stats" list if new person added or "stats" element changed
+function clearStats() {
+    try {
+        (stats.firstElementChild.nextElementSibling)
+        // creating <h2> element for statistic list "stats"
+        const h2Element = document.createElement('h2');
+        h2Element.textContent = 'Stats';
+
+        // clearance "stats" field and adding <h2>
+        stats.textContent = '';
+        stats.appendChild(h2Element);
+    } catch (e) {
+        console.log(e)
+        alert('Enter personal data to get statistic');
+    }
+
+
+}
+
+// function to display persons list
+function displayPersons() {
     const listOfPersons = document.createElement('ol');
     for (let i = 0; i < persons.length; i++) {
         const text = document.createTextNode(persons[i].toString());
         const li = document.createElement('li');
         li.appendChild(text);
+
+        // Adding delete button for each person
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+            persons.splice(i, 1);
+            displayPersons();
+            clearStats();
+        };
+
+        li.appendChild(deleteButton);
         listOfPersons.appendChild(li);
     }
 
-    // adding list of person "personList" to output
-    personsList.textContent = '';
+    personsList.innerHTML = '';
     personsList.appendChild(listOfPersons);
 }
 
+
 // function / "Get stats" button/ creating statistical data; formation and filling "stats" fields
 calcStats.onclick = function () {
-    // creating <h2> element for statistic list "stats"
-    const h2Element = document.createElement('h2');
-    h2Element.textContent = 'Stats';
-
-    // clearance "stats" field and adding <h2>
-    stats.textContent = '';
-    stats.appendChild(h2Element);
+    clearStats();
 
     // calculation of oldest, youngest persons and average age -> "stats"
     const oldestPerson = persons.reduce((accum, p) => p.age() < accum.age() ? p : accum);
@@ -77,7 +105,7 @@ calcStats.onclick = function () {
 function findId(persons, id) {
     // find person by id; return index of person if person exists, otherwise returns -1;
     for (let i = 0; i < persons.length; i++) {
-        if (persons[i].id === id) {
+        if (persons[i].personId === id) {
             return i;
         }
     }

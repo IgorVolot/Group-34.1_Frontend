@@ -5,3 +5,6 @@ div {
 h2 {
     margin: auto 5px;
 }
+#stats > p {
+    margin: auto 5px;
+}
