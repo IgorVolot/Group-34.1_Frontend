@@ -45,7 +45,7 @@ function clearStats() {
         stats.appendChild(h2Element);
     } catch (e) {
         console.log(e)
-        alert('Enter personal data to get statistic');
+        alert('No data to processing');
     }
 
 
@@ -59,9 +59,10 @@ function displayPersons() {
         const li = document.createElement('li');
         li.appendChild(text);
 
-        // Adding delete button for each person
+        // Adding delete button for each person / delete item upon "Delete" button pressing
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('del');
         deleteButton.onclick = function () {
             persons.splice(i, 1);
             displayPersons();

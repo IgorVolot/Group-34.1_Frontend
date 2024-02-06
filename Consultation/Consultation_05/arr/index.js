@@ -24,7 +24,7 @@ console.log(noSuchKey)
 
 const user = { id:1, email:"user@email.com", login:"funny_user"}
 // const email = user.email;
-const {email, id, login} = user
+const {email, id: personId, login} = user
 console.log(email)
 
 
