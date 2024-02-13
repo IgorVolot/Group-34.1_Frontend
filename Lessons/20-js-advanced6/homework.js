@@ -11,7 +11,7 @@
 //         console.log(i);
 //     }, 1000);
 // }
-//
+
 // // Solution 2 -> :( add a variable to loop and reassign the variable for output
 // for (var i = 0; i < 10; i++) {
 //     let j = i;
@@ -19,7 +19,7 @@
 //         console.log(j);
 //     }, 1000);
 // }
-//
+
 // // Solution 3 -> use anonymous wrapper function
 // for (var i = 0; i < 10; i++) {
 //     (function(j) {
@@ -28,7 +28,7 @@
 //         }, 1000);
 //     })(i);
 // }
-//
+
 // // Solution 4 -> use wrapper function
 // for (var i = 0; i < 10; i++) {
 //     function fn(j) {
@@ -38,7 +38,7 @@
 //     }
 //     fn(i);
 // }
-//
+
 // // Solution 5 -> use setTimeout arguments
 // for (let i = 0; i < 10; i++) {
 //     setTimeout(function (i) {
