@@ -25,8 +25,6 @@ function fetchCurrencies() {
 function populateSelectElements(symbols) {
     const fromSelect = document.createElement('select');
     const toSelect = document.createElement('select');
-    fromSelect.id = 'from-currency';
-    toSelect.id = 'to-currency';
 
     Object.keys(symbols).forEach(symbol => {
         fromSelect.options.add(new Option(symbol, symbol));
@@ -37,38 +35,41 @@ function populateSelectElements(symbols) {
     const toInput = document.getElementById('to');
     fromInput.parentNode.replaceChild(fromSelect, fromInput);
     toInput.parentNode.replaceChild(toSelect, toInput);
+    convertHandler(fromSelect, toSelect);
 }
 
-convert.onclick = () => {
-    const fromCurrency = document.getElementById('from-currency').value;
-    const toCurrency = document.getElementById('to-currency').value;
-    const amount = document.getElementById('sum').value;
+function convertHandler(fromCurrency, toCurrency) {
+    convert.onclick = () => {
+        const amount = document.getElementById('sum').value;
 
-    fetch(`${base_url}/convert?from=${fromCurrency}&to=${toCurrency}&amount=${amount}`, {
-        headers: {
-            apikey: api_key
-        }
-    })
-        .then(result => result.json())
-        .then(data => data.result)
-        .then(res => {
-            const h1 = document.createElement('h1');
-            h1.append(`Result: ${res.toFixed(2)}`)
-            if (result.firstElementChild) {
-                result.replaceChild(h1, result.firstElementChild)
-            } else {
-                result.append(h1);
+        fetch(`${base_url}/convert?from=${fromCurrency.value}&to=${toCurrency.value}&amount=${amount}`, {
+            headers: {
+                apikey: api_key
             }
         })
-        .catch(e => {
-            const h1 = document.createElement('h1');
-            h1.append('Error')
-            if (result.firstElementChild) {
-                result.replaceChild(h1, result.firstElementChild)
-            } else {
-                result.append('h1');
-            }
-        })
+            .then(result => result.json())
+            .then(data => data.result)
+            .then(res => {
+                const h1 = document.createElement('h1');
+                h1.append(`Result: ${res.toFixed(2)}`)
+                if (result.firstElementChild) {
+                    result.replaceChild(h1, result.firstElementChild)
+                } else {
+                    result.append(h1);
+                }
+            })
+            .catch(e => {
+                const h1 = document.createElement('h1');
+                h1.append('Error')
+                if (result.firstElementChild) {
+                    result.replaceChild(h1, result.firstElementChild)
+                } else {
+                    result.append('h1');
+                }
+            })
+    }
 }
+
+
 
 
