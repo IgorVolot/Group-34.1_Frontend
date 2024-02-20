@@ -1,6 +1,27 @@
+/**
+ * This variable represents the container or root element, obtained using the
+ * 'getElementById' function available in the 'document' object. It is commonly
+ * used in web development to manipulate or access the root element of a web page.
+ *
+ * @type {HTMLElement}
+ * @readonly
+ */
 const container = document.getElementById('root');
+/**
+ * A reference to the root element created using `ReactDOM.createRoot`.
+ * @type {ReactDOMRoot}
+ */
 const root = ReactDOM.createRoot(container);
 
+/**
+ * Represents a Task component.
+ * @param {Object} props - The properties of the task component.
+ * @param {string} props.children - The content of the task.
+ * @param {function} props.editTask - A function to edit the task.
+ * @param {function} props.removeTask - A function to remove the task.
+ * @param {number} props.index - The index of the task.
+ * @returns {JSX.Element} - The JSX element representing the task component.
+ */
 const Task = ({children, editTask, removeTask, index}) => {
 
     const [isEdit, setIsEdit] = React.useState(false);
@@ -33,6 +54,11 @@ const Task = ({children, editTask, removeTask, index}) => {
     }
 }
 
+/**
+ * TaskList represents a component that allows users to manage a list of tasks.
+ *
+ * @return {JSX.Element} The rendered TaskList component.
+ */
 const TaskList = () => {
     const [tasks, setTasks] = React.useState([]);
 
