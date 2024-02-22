@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/png" href="./content/icon-plane.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Photo Booth</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div id="root" class="container-fluid">
+        <header>
+            <div class="header col-12 align-content-center">
+                <h1 class="text">Airplanes I've flown over the last 30 years</h1>
+            </div>
+        </header>
+        <main class="clearfix">
+            <div>
+                <h2 class="col-12 text-center mt-5">Photo Booth</h2>
+            </div>
+            <div class="d-flex justify-content-center m-5" >
+                <section class="col-3 w-50 row ">
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane1.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane2.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane3.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane4.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane5.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane6.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane7.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane8.jpeg" alt="Plane"/>
+                    <img class="col-4 btn img-thumbnail p-1" src="./content/plane9.jpeg" alt="Plane"/>
+                </section>
+            </div>
+            <div class="loader">
+                <h3 class="text-center" id="describe"></h3>
+                <p class="text-center" id="info"></p>
+            </div>
+        </main>
+        <footer>
+            <p class="text-center">© 2021 Photo Booth. All rights reserved.</p>
+        </footer>
+    </div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

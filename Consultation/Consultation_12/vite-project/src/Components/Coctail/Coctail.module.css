@@ -1,0 +1,11 @@
+.container{
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    background-color: blueviolet;
+}
+img{
+    width: 100%;
+}

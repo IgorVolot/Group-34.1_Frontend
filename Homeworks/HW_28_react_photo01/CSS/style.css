@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bruno+Ace&family=Protest+Riot&display=swap');
+
+body {
+    background-image: url(/content/sky-bkgrnd1.jpeg);
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #655c3b;
+    /*background-attachment: fixed;*/
+    text-align: center;
+}
+
+/*
+Header
+ */
+
+header {
+    background-image: url(/content/hdr-bkgrnd.jpg);
+    background-size: cover;
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: rgb(222, 202, 135);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main */
+.col-3 {
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Footer */
+footer {
+    background-image: url(/content/hdr-bkgrnd.jpg);
+    color: #f3c32c;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+

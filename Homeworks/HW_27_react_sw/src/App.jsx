@@ -5,10 +5,20 @@ function App() {
         <div className="container-fluid">
             <header>
                 <nav className="fixed-top">
-                    <button type="button" className="nav-item btn btn-danger mx-1">Home</button>
-                    <button type="button" className="nav-item btn btn-danger mx-1">About me</button>
-                    <button type="button" className="nav-item btn btn-danger mx-1">Star Wars</button>
-                    <button type="button" className="nav-item btn btn-danger mx-1">Contact</button>
+                    <ul className="nav mt-1 ms-5">
+                        <li>
+                            <button type="button" className="nav-item btn btn-danger mx-1">Home</button>
+                        </li>
+                        <li>
+                            <button type="button" className="nav-item btn btn-danger mx-1">About me</button>
+                        </li>
+                        <li>
+                            <button type="button" className="nav-item btn btn-danger mx-1">Star Wars</button>
+                        </li>
+                        <li>
+                            <button type="button" className="nav-item btn btn-danger mx-1">Contact</button>
+                        </li>
+                    </ul>
                 </nav>
                 <h1 className="py-4">Luke Skywalker</h1>
             </header>
