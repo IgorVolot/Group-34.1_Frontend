@@ -1,8 +1,11 @@
-import React from "react"
+import React from "react";
 
-const Plane = ({image}) => {
+const Plane = ({ image, onClick }) => {
     return (
-        <img className="col-4 btn img-thumbnail p-1" src={image} alt="Plane"/>
-    )
-}
-export default Plane
+        <div className='col-4'>
+            <img className="btn img-thumbnail p-1" src={image} alt="Plane" onClick={() => onClick(image)}/>
+        </div>
+    );
+};
+
+export default Plane;
