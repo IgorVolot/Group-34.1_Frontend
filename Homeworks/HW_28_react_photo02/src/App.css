@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.large {
+  width: 960px;
+}
